@@ -1,8 +1,8 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="quickstart_etl",
-    packages=find_packages(exclude=["quickstart_etl_tests"]),
+    name="open_weather",
+    packages=find_packages(exclude=["open_weather_tests"]),
     install_requires=[
         "dagster",
         "dagster-cloud",
