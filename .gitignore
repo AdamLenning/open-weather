@@ -1,1 +1,9 @@
+# Ignore __pycache__ directories
+**/__pycache__/
+*.py[cod]
+
+# Ignore .env file
 .env
+
+# Ignore .venv folder
+.venv/
