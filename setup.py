@@ -12,6 +12,8 @@ setup(
         "textblob",
         "tweepy",
         "wordcloud",
+        "psycopg2-binary",
+        "sqlalchemy",
     ],
     extras_require={"dev": ["dagster-webserver", "pytest"]},
 )
