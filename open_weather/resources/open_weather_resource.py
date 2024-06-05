@@ -1,5 +1,6 @@
 from dagster import ConfigurableResource
 
+
 class OpenWeatherResource(ConfigurableResource):
     api_key: str
 

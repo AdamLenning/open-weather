@@ -1,6 +1,7 @@
 from dagster import ConfigurableResource
 from sqlalchemy import create_engine
 
+
 class PostgresResource(ConfigurableResource):
     host: str
     dbname: str
@@ -11,7 +12,7 @@ class PostgresResource(ConfigurableResource):
     def get_engine(self):
         """
         Returns a sqlalchemy engine.
-        
+
         :param host: The host address of the PostgreSQL server
         :param dbname: The name of the database
         :param user: The username to connect to the database
@@ -19,4 +20,6 @@ class PostgresResource(ConfigurableResource):
         :param port: The port number (default is 5432)
         :return: A psycopg2 connection object
         """
-        return create_engine(f'postgresql+psycopg2://{self.user}:{self.password}@{self.host}:{self.port}/{self.dbname}')
+        return create_engine(
+            f"postgresql+psycopg2://{self.user}:{self.password}@{self.host}:{self.port}/{self.dbname}"
+        )

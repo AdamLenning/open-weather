@@ -11,7 +11,6 @@ setup(
         "sqlalchemy",
         "dbt-core",
         "dbt-postgres",
-
     ],
     extras_require={"dev": ["dagster-webserver", "pytest"]},
 )

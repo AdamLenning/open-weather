@@ -16,18 +16,20 @@ hourly_schedule = ScheduleDefinition(
 )
 
 postgres_resource = PostgresResource(
-                        host=EnvVar("PG_HOST"), 
-                        dbname=EnvVar("PG_DBNAME"), 
-                        user=EnvVar("PG_USER"),
-                        password=EnvVar("PG_PASSWORD"),
-                        port=EnvVar("PG_PORT"),
-                    )
+    host=EnvVar("PG_HOST"),
+    dbname=EnvVar("PG_DBNAME"),
+    user=EnvVar("PG_USER"),
+    password=EnvVar("PG_PASSWORD"),
+    port=EnvVar("PG_PORT"),
+)
 
 open_weather_resource = OpenWeatherResource(api_key=EnvVar("API_KEY"))
 
 defs = Definitions(
-    assets=load_assets_from_package_module(assets), 
-    schedules=[hourly_schedule], 
-    resources={"postgres_resource": postgres_resource,
-               "open_weather_resource": open_weather_resource,}
+    assets=load_assets_from_package_module(assets),
+    schedules=[hourly_schedule],
+    resources={
+        "postgres_resource": postgres_resource,
+        "open_weather_resource": open_weather_resource,
+    },
 )
