@@ -6,14 +6,12 @@ setup(
     install_requires=[
         "dagster",
         "dagster-cloud",
-        "boto3",
         "pandas",
-        "matplotlib",
-        "textblob",
-        "tweepy",
-        "wordcloud",
         "psycopg2-binary",
         "sqlalchemy",
+        "dbt-core",
+        "dbt-postgres",
+
     ],
     extras_require={"dev": ["dagster-webserver", "pytest"]},
 )
