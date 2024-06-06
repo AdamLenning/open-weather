@@ -9,8 +9,7 @@ setup(
         "pandas",
         "psycopg2-binary",
         "sqlalchemy",
-        "dbt-core",
-        "dbt-postgres",
+        "dagster-slack",
     ],
     extras_require={"dev": ["dagster-webserver", "pytest"]},
 )

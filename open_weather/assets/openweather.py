@@ -87,12 +87,15 @@ def current_weather_model(
 
 
 @asset(group_name="openweather", compute_kind="Postgres")
-def current_weather_models(
+def weather_tables(
     context: AssetExecutionContext,
     current_weather_model: dict,
     postgres_resource: PostgresResource,
 ) -> None:
-    """Load the data models into Postgres."""
+    """Load the data models into Postgres.
+
+    The keys in the incoming dictionary serve as the table names used for insterting.
+    """
     try:
         for table_name, dataframe in current_weather_model.items():
             dataframe.to_sql(
