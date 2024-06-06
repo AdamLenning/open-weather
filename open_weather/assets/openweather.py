@@ -72,7 +72,7 @@ def current_weather_model(
             }
         )
         return {
-            "current_weather_df": current_weather_df,
+            "current_weather": current_weather_df,
             "weather_conditions": weather_conditions,
         }
 
